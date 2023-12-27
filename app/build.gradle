@@ -1,0 +1,57 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+//apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.magicgoop.tagsphere.example"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+        resConfig "en"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    lintOptions {
+        abortOnError false
+    }
+    buildFeatures {
+        dataBinding true
+    }
+}
+
+//tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+//    kotlinOptions {
+//        jvmTarget = "1.8"
+//    }
+//}
+
+dependencies {
+    implementation project(':viewk_tagspere')
+    implementation project(':SwiftKit:basick')
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+//    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}
