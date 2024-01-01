@@ -10,6 +10,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.text.HtmlCompat
 import com.magicgoop.tagpshere.example.R
 import com.magicgoop.tagpshere.example.databinding.FragmentShowcase3Binding
+import com.magicgoop.tagpshere.example.showcase4.BitmapDrawableTagItem
 import com.magicgoop.tagsphere.OnTagTapListener
 import com.magicgoop.tagsphere.item.TagItem
 import com.mozhimen.basick.elemk.androidx.fragment.bases.BaseFragmentVB
