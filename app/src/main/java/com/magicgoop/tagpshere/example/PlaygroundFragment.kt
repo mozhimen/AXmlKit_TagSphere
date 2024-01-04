@@ -2,6 +2,7 @@ package com.magicgoop.tagpshere.example
 
 import android.os.Bundle
 import android.text.TextPaint
+import android.util.Log
 import android.widget.SeekBar
 import com.google.android.material.snackbar.Snackbar
 import com.magicgoop.tagpshere.example.databinding.FragmentPlaygroundBinding
@@ -54,12 +55,12 @@ class PlaygroundFragment : BaseFragmentVB<FragmentPlaygroundBinding>(), OnTagLon
     private fun initSettings() {
         vb.sbRadius.setOnSeekBarChangeListener(object : CustomOnSeekBarChangeListener() {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                vb.tagView.setRadius((progress + MIN_RADIUS) / 10f)
+                vb.tagView.setRadius(((progress + MIN_RADIUS) / 10f).also { Log.d(TAG, "onProgressChanged: setRadius $it") })
             }
         })
         vb.sbTouchSensitivity.setOnSeekBarChangeListener(object : CustomOnSeekBarChangeListener() {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                vb.tagView.setTouchSensitivity(progress + MIN_SENSITIVITY)
+                vb.tagView.setTouchSensitivity((progress + MIN_SENSITIVITY).also { Log.d(TAG, "onProgressChanged: setTouchSensitivity $it") })
             }
         })
         vb.cbRotateOnTouch.setOnCheckedChangeListener { _, isChecked ->
