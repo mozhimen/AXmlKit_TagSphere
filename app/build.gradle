@@ -46,7 +46,7 @@ android {
 //}
 
 dependencies {
-    implementation project(':viewk_tagspere')
+    implementation project(':viewk_tagsphere')
     implementation project(':SwiftKit:basick')
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 //    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"

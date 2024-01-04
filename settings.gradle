@@ -19,11 +19,10 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "AUICoreKit_TagSpere"
+rootProject.name = "AUICoreKit_TagSphere"
 include ':app'
-include ':viewk_tagspere'
+include ':viewk_tagsphere'
 //SwiftKit
 include ':SwiftKit'
 project(':SwiftKit').projectDir = new File("C:\\Users\\${System.getenv().get("USERNAME")}\\Documents\\GitHub\\SwiftKit")
 include ':SwiftKit:basick'
-include ':umeng_statistics'
