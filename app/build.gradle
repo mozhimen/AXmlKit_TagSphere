@@ -6,6 +6,7 @@ plugins {
 //apply plugin: 'kotlin-android-extensions'
 
 android {
+    namespace "com.magicgoop.tagpshere.example"
     compileSdk 33
 
     defaultConfig {
@@ -46,9 +47,8 @@ android {
 //}
 
 dependencies {
-    implementation project(':viewk_tagsphere')
-    implementation project(':SwiftKit:basick')
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation project(':library')
+    implementation project(':ASwiftKit:basick')
 //    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     testImplementation 'junit:junit:4.13.2'
